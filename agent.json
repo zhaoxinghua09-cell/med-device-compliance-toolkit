@@ -1,0 +1,46 @@
+{
+  "schema": "ubic/agent-card/v1",
+  "name": "MedXpert 医疗器械合规工具箱",
+  "description": "Medical device compliance tools. Self-assessment checklists for MDR / IVDR / SaMD / cybersecurity / post-market surveillance. Read-only, zero egress, audit-traceable.",
+  "protocol": "MCP",
+  "provider": {
+    "organization": "MedXpert",
+    "url": "https://medxpert.cn"
+  },
+  "author": "MedXpert (org) · operated by SynomosAI governance line",
+  "capabilities": [
+    "medical device compliance",
+    "MDR",
+    "IVDR",
+    "SaMD",
+    "post-market",
+    "合规自评",
+    "PMS",
+    "PSUR"
+  ],
+  "keywords": [
+    "medical device compliance",
+    "MDR",
+    "IVDR",
+    "SaMD",
+    "post-market",
+    "合规自评",
+    "PMS",
+    "PSUR"
+  ],
+  "auth": {
+    "mode": "none",
+    "note": "read-only, no credentials required"
+  },
+  "transport": {
+    "type": "stdio",
+    "command": "python",
+    "args": [
+      "server.py"
+    ]
+  },
+  "homepage": "https://medxpert.cn",
+  "license": "MIT",
+  "installByConsent": "AI may request install; human approves (A3 Law II)",
+  "scope": "regulatory knowledge query — not legal/clinical advice"
+}
