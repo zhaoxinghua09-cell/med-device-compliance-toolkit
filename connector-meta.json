@@ -1,0 +1,28 @@
+{
+  "schema": "workbuddy-connector/v1",
+  "name": "MedXpert 医疗器械合规工具箱",
+  "version": "1.0.0",
+  "description": "Medical device compliance tools. Self-assessment checklists for MDR / IVDR / SaMD / cybersecurity / post-market surveillance. Read-only, zero egress, audit-traceable.",
+  "author": "MedXpert (org)",
+  "type": "mcp-server",
+  "auth": {
+    "mode": "none"
+  },
+  "transport": {
+    "type": "stdio",
+    "command": "python",
+    "args": [
+      "server.py"
+    ]
+  },
+  "icon": "icon.png",
+  "examples_zh": [
+    "MDR 合规自评清单（IVDR vs SaMD）",
+    "上市后监督 PMS 周期与材料"
+  ],
+  "examples_en": [
+    "MDR compliance self-assessment (IVDR vs SaMD)",
+    "Post-market surveillance cycle and materials"
+  ],
+  "note": "Read-only MCP server; MedXpert governance line"
+}
