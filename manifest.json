@@ -1,0 +1,16 @@
+{
+  "name": "med-device-compliance-toolkit",
+  "displayName": { "zh": "医疗器械合规工具箱", "en": "MedCompliance Toolkit" },
+  "version": "1.0.0",
+  "type": "agent",
+  "category": "12-IndustryConsultant",
+  "author": "潘布达 (Buda Pan)",
+  "license": "MIT",
+  "summary": "医疗器械合规 MCP 工具集合门户（覆盖全医疗器械领域的框架，当前已入驻骨科器械检测方向）：聚合 ortho-mcp 与检械通编排能力，路由请求并引导安装底层资产，预留扩展位。",
+  "dependencies": {
+    "connectors": ["medxpert-ortho-mcp"]
+  },
+  "dataDisclosure": "机构库/标准库/报价为配套 ortho-mcp 连接器的示例数据（非真实资质），详见其 SAMPLE_DATA.md，可自行替换。",
+  "securitySummary": "本地只读，零网络外发、零凭据；依赖的 ortho-mcp 连接器亦为本地闭环。详见 SECURITY.md。",
+  "publishedVia": "WorkBuddy 开放平台"
+}

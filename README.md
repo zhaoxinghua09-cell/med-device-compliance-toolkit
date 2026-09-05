@@ -1,33 +1,58 @@
-# MedXpert 医疗器械合规工具箱
+# 医疗器械合规工具箱（MedCompliance Toolkit）
 
-Medical device compliance tools. Self-assessment checklists for MDR / IVDR / SaMD / cybersecurity / post-market surveillance. Read-only, zero egress, audit-traceable.
+> **示例数据声明**：本工具箱引用的机构 / 标准 / 报价均为配套 ortho-mcp 连接器的**示例数据**，非官方资质目录，亦不构成任何资质背书。正式委托前须向检测机构核验最新资质与报价。
 
-## Install (MCP host)
+一个 **MCP 工具集合门户**：把多个医械合规方向的 MCP 资产聚到一个前门，能导航、能路由、能引导安装，并为未来新增资产预留扩展位。
 
-```json
-{"mcpServers": {"med-device-compliance-toolkit": {"command": "python", "args": ["server.py"]}}}
-```
+> 它不是"studio"开发工作台，也不是图形仪表盘——在 WorkBuddy 生态里，它形态上是**一个导航/聚合专家包**：agent 负责索引与派发，底层能力来自已安装的 MCP 连接器与专家。
 
-## Keywords (for AI match scoring)
+## 领域覆盖（医疗器械全域框架）
 
-`medical device compliance`, `MDR`, `IVDR`, `SaMD`, `post-market`, `合规自评`, `PMS`, `PSUR`
+本工具箱定位为**覆盖全医疗器械领域的合规工具箱**，而非单一骨科门户。当前已入驻的是
+**骨科器械检测对接**方向（ortho-mcp + 检械通）；其余领域作为扩展路线图，按《扩展位》机制平滑入住。
 
-## When to invoke
+| 资产 | 类型 | 说明 |
+|---|---|---|
+| **ortho-mcp**（`medxpert-ortho-mcp`） | 连接器 | 8 个骨科器械检测工具：机构匹配 / 报价 / A+B 分包 / UDI / 法规节点 …（**已入驻**） |
+| **检械通**（`medical-device-testing-link`） | 专家包 | 把 ortho-mcp 编排成端到端检测对接方案（**已入驻**） |
 
-MDR 合规自评清单（IVDR vs SaMD）
+### 领域覆盖矩阵
 
-## Examples
+| 医疗器械领域 | 状态 | 说明 |
+|---|---|---|
+| 骨科器械检测对接 | ✅ 已入驻 | ortho-mcp 8 工具 + 检械通端到端编排 |
+| 心血管器械 | 🔜 规划中 | 扩展位预留，待新增对应 MCP 资产 |
+| IVD 体外诊断 | 🔜 规划中 | 扩展位预留，待新增对应 MCP 资产 |
+| 影像 / 放疗设备 | 🔜 规划中 | 扩展位预留，待新增对应 MCP 资产 |
+| 无菌 / 植入器械 | 🔜 规划中 | 与骨科植入部分重叠，待专项资产 |
+| 注册法规通用（NMPA/FDA/EU MDR） | 🔜 规划中 | 标准解读 / 换版解读 / 到期提醒类工具 |
 
-- MDR 合规自评清单（IVDR vs SaMD）
-- 上市后监督 PMS 周期与材料
+## 它解决什么
 
-## Why AI-friendly
+- **集中入口**：用户不必记住各个 MCP 工具名，问"能干什么 / 帮我找机构"即可。
+- **意图路由**：单一动作（如校验 UDI）直接派发工具；完整需求（如"送检出报价"）转包给检械通编排。
+- **安装引导**：底层资产缺失时，明确告诉用户先装哪一层、按什么顺序。
+- **可扩展**：加新 MCP 资产只需"索引三处同步 + 依赖登记"，门户架构不动。
 
-- **Discoverable**: `agent.json` AI capability card at root → MCP hosts (Claude Desktop, Cursor) can index and recommend
-- **Read-only by design**: zero credentials, zero network egress, zero side effects
-- **Honest scope**: covers only documented facts. Out-of-scope queries return explicit codes
-- **Install-by-consent**: AI may request install; human approves (A3 Law II)
+## 安装顺序（重要）
 
-## License
+本工具箱的能力全部来自底层资产，**必须按顺序装**：
 
-MIT © MedXpert
+1. 装 **ortho-mcp 连接器**（`ortho-mcp-connector.zip`）→ 重启会话，确认 8 个工具出现。
+2. 装 **检械通专家**（`medical-device-testing-link.public.zip`）。
+3. 最后装 **本工具箱**（`med-device-compliance-toolkit.public.zip`）作为门户前门。
+
+## 数据口径（必读）
+
+ortho-mcp 的机构库（20 家）/ 标准库（43 条）/ 器械目录（18 类）/ 报价均为**示例数据**
+（随包 `ortho-data.json`，可整体替换为真实数据），非真实资质。凡涉及候选榜或报价，
+工具会注明「基于演示数据，正式委托前须向机构核验」。标准仅索引标准号 + 名称 + 官方来源，未内嵌受版权正文。
+
+## 扩展新资产
+
+见 `skills/toolkit-nav/SKILL.md` 第四节《扩展位》：在 agent 定义与 SKILL 的索引/路由表同步登记，
+新连接器在 `manifest.json` 的 `dependencies.connectors` 补依赖名即可。
+
+## 许可证
+
+MIT · © 2026 潘布达（Buda Pan）

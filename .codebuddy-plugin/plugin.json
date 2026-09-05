@@ -1,0 +1,67 @@
+{
+  "name": "med-device-compliance-toolkit",
+  "version": "1.0.0",
+  "description": "MCP tool collection portal for medical device compliance: a single front-door expert that indexes and routes to ortho-mcp (8 tools) and MedTestLink, with install guidance and an extensible slot for future MCP assets.",
+  "author": {
+    "name": "Buda Pan"
+  },
+  "agents": [
+    "./agents/med-device-compliance-toolkit.md"
+  ],
+  "skills": [
+    "./skills/toolkit-nav"
+  ],
+  "expertType": "agent",
+  "agentName": "med-device-compliance-toolkit",
+  "displayName": {
+    "en": "MedCompliance Toolkit",
+    "zh": "医疗器械合规工具箱"
+  },
+  "profession": {
+    "en": "Medical Device Compliance Navigator",
+    "zh": "医械合规导航师"
+  },
+  "displayDescription": {
+    "en": "A navigable portal aggregating MCP tools for medical device compliance — currently ortho-mcp (lab matching, quote, UDI, deadlines) and MedTestLink orchestration. Routes requests and guides installation of underlying assets.",
+    "zh": "医械合规 MCP 工具集合门户：聚合 ortho-mcp（机构匹配/报价/UDI/法规节点）与检械通编排能力，路由请求并引导安装底层资产，预留扩展位。"
+  },
+  "avatar": "avatars/med-device-compliance-toolkit.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "zh": "我是医疗器械企业的注册质量工程师，想看看你这工具箱里有哪些能力可以用",
+    "en": "I'm a regulatory QA engineer at a medtech firm; show me what capabilities your toolkit has"
+  },
+  "plugin": "med-device-compliance-toolkit",
+  "tags": [
+    {
+      "en": "MCP Portal",
+      "zh": "MCP门户"
+    },
+    {
+      "en": "Compliance Toolkit",
+      "zh": "合规工具箱"
+    },
+    {
+      "en": "Lab Matching",
+      "zh": "机构匹配"
+    },
+    {
+      "en": "Medical Device",
+      "zh": "医疗器械"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "What MCP tools are in this toolkit and when should I use each?",
+      "zh": "这个工具箱里有哪些 MCP 工具，分别什么时候用？"
+    },
+    {
+      "en": "Find testing labs for my spinal implant and compare quotes",
+      "zh": "帮我的脊柱植入物找检测机构并比价"
+    },
+    {
+      "en": "Validate this UDI and tell me upcoming regulatory deadlines",
+      "zh": "校验这个 UDI 并告诉我临近的法规节点"
+    }
+  ]
+}
