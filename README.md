@@ -1,4 +1,17 @@
 # 医疗器械合规工具箱（MedCompliance Toolkit）
+## 许可说明 · License Notice
+
+- **权利状态**：本仓库以 **MIT 许可** 许可发布，可依该许可证条款自由使用、修改与再分发。
+- **引用建议**：引用时请标注仓库名与原文链接 `https://github.com/zhaoxinghua09-cell/med-device-compliance-toolkit`
+  与权利人「赵兴华 / Steven Zhao·China」。
+- **品牌状态限定**：MedXpert、SynomosAI、LGD 等为相关项目标识，
+  **均未申请实体注册、未申请商标注册**；出现仅作来源标识，
+  不构成对法人实体或商标权的任何主张。
+- **完整条款**：见仓库根目录 [LICENSE](LICENSE)。
+- **联系**：zhaoxinghua06@126.com ｜ ORCID 0009-0001-0512-1237
+
+---
+
 
 > **示例数据声明**：本工具箱引用的机构 / 标准 / 报价均为配套 ortho-mcp 连接器的**示例数据**，非官方资质目录，亦不构成任何资质背书。正式委托前须向检测机构核验最新资质与报价。
 
